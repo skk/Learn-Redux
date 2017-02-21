@@ -31,3 +31,16 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+.idea/Learn-Redux.iml
+.idea/dbnavigator.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/jsLibraryMappings.xml
+.idea/markdown-navigator.xml
+.idea/markdown-navigator/profiles_settings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/watcherTasks.xml
+.idea/workspace.xml
+learn-redux/yarn.lock
+yarn.lock
