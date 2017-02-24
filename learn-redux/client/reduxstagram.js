@@ -7,16 +7,16 @@ import {Provider} from 'react-redux';
 //noinspection ES6UnusedImports
 import css from './styles/style.styl';
 
-import Main from './components/Main';
 import Single from './components/Single';
 import PhotoGrid from './components/PhotoGrid';
 import store, {history} from './store';
+import App from './components/App';
 
 
 const router = (
     <Provider store={store}>
         <Router history={history}>
-            <Route path="/" component={Main}>
+            <Route path="/" component={App}>
                 <IndexRoute component={PhotoGrid}>
                 </IndexRoute>
                 <Route path="/view/:postId" component={Single}>
