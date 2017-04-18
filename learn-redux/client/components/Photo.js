@@ -5,7 +5,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 const Photo = (props) => {
-    const {post, idx, comments} = props;
+    const {post, idx, comments, increment} = props;
     return (
         <figure className="grid-figure">
             <div className="grid-photo-wrap">
@@ -19,7 +19,7 @@ const Photo = (props) => {
             <figcaption>
                 <p>{post.caption}</p>
                 <button
-                    onclick={this.props.increment.bind(null, i)}
+                    onClick={increment.bind(null, idx)}
                     className="likes">&hearts; {post.likes}</button>
                 <Link to={`/view/${post.code}`} className="button">
                     <span className="comment-count">
