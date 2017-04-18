@@ -18,7 +18,9 @@ const Photo = (props) => {
             </div>
             <figcaption>
                 <p>{post.caption}</p>
-                <button className="likes">&hearts; {post.likes}</button>
+                <button
+                    onclick={this.props.increment.bind(null, i)}
+                    className="likes">&hearts; {post.likes}</button>
                 <Link to={`/view/${post.code}`} className="button">
                     <span className="comment-count">
                         {comments[post.code] ? comments[post.code].length : 0}
