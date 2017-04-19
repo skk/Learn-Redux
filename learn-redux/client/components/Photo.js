@@ -6,10 +6,10 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 const Photo = (props) => {
     const {post, idx, comments, increment} = props;
+    const url = `/view/${post.code}`;
     return (
         <figure className="grid-figure">
             <div className="grid-photo-wrap">
-                const url = `/view/${post.code}`;
                 <Link to={url}>
                     <img src={post.display_src} alt={post.caption} className="grid-photo-wrap" />
                 </Link>

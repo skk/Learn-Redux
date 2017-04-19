@@ -19,9 +19,7 @@ app.get('*', function(req, res) {
 
 app.listen(7770, 'localhost', function(err) {
   if (err) {
-    console.log(err);
     return;
   }
-
   console.log('Listening at http://localhost:7770');
 });
