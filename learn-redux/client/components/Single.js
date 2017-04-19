@@ -12,7 +12,7 @@ const Single = (props) => {
     return (
         <div className="single-photo">
             <Photo i={idx} post={post} {...props} />
-            <Comments postComments={postComments} />
+            <Comments postComments={postComments} {...props} />
         </div>
     )
 };
