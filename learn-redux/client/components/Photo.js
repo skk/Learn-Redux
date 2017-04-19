@@ -9,7 +9,8 @@ const Photo = (props) => {
     return (
         <figure className="grid-figure">
             <div className="grid-photo-wrap">
-                <Link to={`/view/${post.code}`}>
+                const url = `/view/${post.code}`;
+                <Link to={url}>
                     <img src={post.display_src} alt={post.caption} className="grid-photo-wrap" />
                 </Link>
                 <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
