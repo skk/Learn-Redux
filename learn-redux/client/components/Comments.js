@@ -3,6 +3,7 @@ import React from 'react';
 class Comments extends React.Component {
     constructor(props) {
         super(props);
+        this.renderComment = this.renderComment.bind(this);
     }
 
     handleSubmit(evt) {
@@ -11,6 +12,7 @@ class Comments extends React.Component {
         const author = this.refs.author.value;
         const comment = this.refs.comment.value;
         this.props.addComment(postId, author, comment);
+        evt.target.reset();
     }
 
     renderComment(comment, idx) {
@@ -19,7 +21,8 @@ class Comments extends React.Component {
                 <p>
                     <strong>{comment.user}</strong>
                     {comment.text}
-                    <button className="remove-comment">&times;</button>
+                    <button className="remove-comment"
+                            onClick={this.props.removeComment.bind(null, this.props.params.postId, idx)}>&times;</button>
                 </p>
             </div>
         );
